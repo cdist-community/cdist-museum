@@ -1,11 +1,8 @@
 cdist-type__autofs_map(7)
 =========================
+Manage autofs maps
+
 Steven Armstrong <steven-cdist--@--armstrong.cc>
-
-
-NAME
-----
-cdist-type__autofs_map - Manage autofs maps
 
 
 DESCRIPTION
@@ -20,48 +17,50 @@ The object_id is used as the mount-point as described in auto.master(5).
 
 REQUIRED PARAMETERS
 -------------------
-map::
+map
    Name of the map to use. See auto.master(5).
 
 
 OPTIONAL PARAMETERS
 -------------------
-type::
+type
    Type of map used for this mount point. Defaults to 'file'.
    See map-type in auto.master(5) for possible values.
-options::
+
+options
    See auto.master(5).
-comment::
+
+comment
    A comment describing this map. Is added to the generated entry in
    auto.master.
 
 
 BOOLEAN PARAMETERS
 ------------------
-noreload::
+noreload
    don't reload autofs after the entry has been changed
 
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Add auto mounter at /net and reload
-__autofs_map /net --map /etc/auto.net --type program
+.. code-block:: sh
 
-# Add auto mounter at /pub and don't reload
-__autofs_map /pub \
-   --map /etc/auto.pub \
-   --type file \
-   --options "nosuid,rw,bg,hard,intr --ghost" \
-   --noreload
---------------------------------------------------------------------------------
+    # Add auto mounter at /net and reload
+    __autofs_map /net --map /etc/auto.net --type program
+
+    # Add auto mounter at /pub and don't reload
+    __autofs_map /pub \
+       --map /etc/auto.pub \
+       --type file \
+       --options "nosuid,rw,bg,hard,intr --ghost" \
+       --noreload
 
 
 SEE ALSO
 --------
-- cdist-type(7)
-- cdist-type__autofs_reload(7)
+- `cdist-type(7) <cdist-type.html>`_
+- `cdist-type__autofs_reload(7) <cdist-type__autofs_reload.html>`_
 
 
 COPYING

@@ -1,11 +1,8 @@
-cdist-type__autofs(7)
-=====================
+cdist-type__autofs_reload(7)
+============================
+Tell automounter to reload config file
+
 Steven Armstrong <steven-cdist--@--armstrong.cc>
-
-
-NAME
-----
-cdist-type__autofs - install and start autofs
 
 
 DESCRIPTION
@@ -26,14 +23,14 @@ None.
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-__autofs
---------------------------------------------------------------------------------
+.. code-block:: sh
+
+    __autofs_reload
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING
