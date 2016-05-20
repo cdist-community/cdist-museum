@@ -1,11 +1,8 @@
 cdist-type__package_update_index(7)
 ===================================
+Update the package index
+
 Ricardo Catalinas Jiménez <jimenezrick--@--gmail.com>
-
-
-NAME
-----
-cdist-type__package_update_index - Update the package index
 
 
 DESCRIPTION
@@ -21,29 +18,30 @@ None
 
 OPTIONAL PARAMETERS
 -------------------
-type::
+type
     The package manager to use. Default is determined based on the $os
     explorer variable.
-    e.g. apt for Debian
-         yum for Red Hat
-         pacman for Arch Linux
+    e.g. 
+    * apt for Debian
+    * yum for Red Hat
+    * pacman for Arch Linux
 
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Update the package index on the target
-__package_update_index
+.. code-block:: sh
 
-# Force use of a specific package manager
-__package_update_index --type apt
---------------------------------------------------------------------------------
+    # Update the package index on the target
+    __package_update_index
+
+    # Force use of a specific package manager
+    __package_update_index --type apt
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

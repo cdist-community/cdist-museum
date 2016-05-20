@@ -1,11 +1,8 @@
 cdist-type__qemu_img(7)
 =======================
+Manage VM disk images
+
 Nico Schottelius <nico-cdist--@--schottelius.org>
-
-
-NAME
-----
-cdist-type__qemu_img - Manage VM disk images
 
 
 DESCRIPTION
@@ -17,9 +14,9 @@ qemu and (qemu-)kvm.
 
 OPTIONAL PARAMETERS
 -------------------
-state::
+state
     Either "present" or "absent", defaults to "present"
-size::
+size
     Size of the image in qemu-img compatible units.
 
     Required if state is "present".
@@ -28,18 +25,18 @@ size::
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Create a 50G size image
-__qemu_img /home/services/kvm/vm/myvmname/system-disk --size 50G
+.. code-block:: sh
 
-# Remove image
-__qemu_img /home/services/kvm/vm/myoldvm/system-disk --state absent
---------------------------------------------------------------------------------
+    # Create a 50G size image
+    __qemu_img /home/services/kvm/vm/myvmname/system-disk --size 50G
+
+    # Remove image
+    __qemu_img /home/services/kvm/vm/myoldvm/system-disk --state absent
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 - qemu-img(1)
 
 

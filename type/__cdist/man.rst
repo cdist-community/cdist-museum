@@ -1,11 +1,8 @@
 cdist-type__cdist(7)
 ====================
+Manage cdist installations
+
 Nico Schottelius <nico-cdist--@--schottelius.org>
-
-
-NAME
-----
-cdist-type__cdist - Manage cdist installations
 
 
 DESCRIPTION
@@ -26,16 +23,16 @@ REQUIRED PARAMETERS
 
 OPTIONAL PARAMETERS
 -------------------
-username::
+username
     Select the user to create for the cdist installation.
     Defaults to "cdist".
 
-source::
+source
     Select the source from which to clone cdist from.
     Defaults to "git://github.com/telmich/cdist.git".
 
 
-branch::
+branch
     Select the branch to checkout from.
     Defaults to "master".
 
@@ -43,18 +40,18 @@ branch::
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Install cdist for user cdist in her home as subfolder cdist
-__cdist /home/cdist/cdist
+.. code-block:: sh
 
-# Use alternative source
-__cdist --source "git://git.schottelius.org/cdist" /home/cdist/cdist
---------------------------------------------------------------------------------
+    # Install cdist for user cdist in her home as subfolder cdist
+    __cdist /home/cdist/cdist
+
+    # Use alternative source
+    __cdist --source "git://git.schottelius.org/cdist" /home/cdist/cdist
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

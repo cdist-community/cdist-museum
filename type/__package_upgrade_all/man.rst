@@ -1,11 +1,8 @@
 cdist-type__package_upgrade_all(7)
 ==================================
+Upgrade all the installed packages
+
 Ricardo Catalinas Jiménez <jimenezrick--@--gmail.com>
-
-
-NAME
-----
-cdist-type__package_upgrade_all - Upgrade all the installed packages
 
 
 DESCRIPTION
@@ -21,29 +18,30 @@ None
 
 OPTIONAL PARAMETERS
 -------------------
-type::
+type
     The package manager to use. Default is determined based on the $os
     explorer variable.
-    e.g. apt for Debian
-         yum for Red Hat
-         pacman for Arch Linux
+    e.g.
+    * apt for Debian
+    * yum for Red Hat
+    * pacman for Arch Linux
 
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Upgrade all the installed packages on the target
-__package_upgrade_all
+.. code-block:: sh
 
-# Force use of a specific package manager
-__package_upgrade_all --type apt
---------------------------------------------------------------------------------
+    # Upgrade all the installed packages on the target
+    __package_upgrade_all
+
+    # Force use of a specific package manager
+    __package_upgrade_all --type apt
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING
