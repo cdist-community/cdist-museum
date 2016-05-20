@@ -1,11 +1,8 @@
 cdist-type__rsyncer(7)
 ======================
+Use rsync to copy files.
+
 Daniel Maher <phrawzty+cdist at gmail.com>
-
-
-NAME
-----
-cdist-type__rsyncer - Use rsync to copy files.
 
 
 DESCRIPTION
@@ -19,41 +16,41 @@ from the destination which are not present on the source.
 
 REQUIRED PARAMETERS
 -------------------
-source::
+source
     The full path of the source from which to copy. This is passed directly
     to rsync.
 
 
 OPTIONAL PARAMETERS
 -------------------
-destination::
+destination
     The full path of the destination. This is passed directly to rsync.
     Default: object_id
 
-delete::
+delete
     If true, remove files from destination which are not in source. This is
     effectively the --delete argument of rsync.
     Default: false
 
-rsyncbin::
+rsyncbin
     Specify the full path to the rsync binary.
     Default: `which rsync`
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Basic example
-__rsyncer '/home/foo' --source '/opt/dist/foo'
+.. code-block:: sh
 
-# Fancier example
-__rsyncer FOO --source '/opt/dist/foo' --destination '/home/foo/' --delete true
---------------------------------------------------------------------------------
+    # Basic example
+    __rsyncer '/home/foo' --source '/opt/dist/foo'
+
+    # Fancier example
+    __rsyncer FOO --source '/opt/dist/foo' --destination '/home/foo/' --delete true
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

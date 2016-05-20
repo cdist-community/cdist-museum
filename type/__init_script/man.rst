@@ -1,11 +1,8 @@
 cdist-type__init_script(7)
 ==========================
+Use the init scripts
+
 Daniel Roth <dani-cdist--@--d-roth.li>
-
-
-NAME
-----
-cdist-type__init_script - Use the init scripts
 
 
 DESCRIPTION
@@ -15,34 +12,35 @@ This type can be used to control your init scripts.
 
 REQUIRED PARAMETERS
 -------------------
-mode::
+mode
    Specifies what shall be done with the init script (usually one of 'start'|'stop'|'restart'|'reload' or 'force-reload')
 
 
 OPTIONAL PARAMETERS
 -------------------
-script::
+script
    If supplied, use this as the init-script.
    Otherwise the object_id is used.
 
-base_dir::
+base_dir
    If supplied, this type uses this directory instead of '/etc/init.d'. The parameter will not need an ending slash.
+
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# Reloads the configuration for lighttpd 
-__init_script lighttpd --mode force-reload
+.. code-block:: sh
 
-# Reloads the configuration for lighttpd 
-__init_script lighty --script lighttpd --mode force-reload
---------------------------------------------------------------------------------
+    # Reloads the configuration for lighttpd 
+    __init_script lighttpd --mode force-reload
+
+    # Reloads the configuration for lighttpd 
+    __init_script lighty --script lighttpd --mode force-reload
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

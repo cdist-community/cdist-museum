@@ -1,11 +1,8 @@
 cdist-type__nfs_export(7)
 =========================
+Manage nfs exports
+
 Steven Armstrong <steven-cdist--@--armstrong.cc>
-
-
-NAME
-----
-cdist-type__nfs_export - manage nfs exports
 
 
 DESCRIPTION
@@ -17,35 +14,35 @@ For older distributions (currently ubuntu lucid) that don't support
 
 REQUIRED PARAMETERS
 -------------------
-client::
+client
    space delimited list of client ip/networks for use in /etc/exports. See exports(5)
 
 
 OPTIONAL PARAMETERS
 -------------------
-options::
+options
    export options for use in /etc/exports. See exports(5)
 
-export::
+export
    the directory to export. Defaults to object_id
 
-state::
+state
    Either present or absent. Defaults to present.
 
 
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-__nfs_export /local/chroot/lucid-amd64 \
-   --client "192.168.0.1/24 10.0.0.1/16" \
-   --options "ro,async,no_all_squash,no_root_squash,subtree_check"
---------------------------------------------------------------------------------
+.. code-block:: sh
+
+    __nfs_export /local/chroot/lucid-amd64 \
+       --client "192.168.0.1/24 10.0.0.1/16" \
+       --options "ro,async,no_all_squash,no_root_squash,subtree_check"
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 - exports(5)
 
 

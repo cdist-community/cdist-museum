@@ -1,11 +1,8 @@
 cdist-type__nfs_client(7)
 =========================
+nfs client
+
 Steven Armstrong <steven-cdist--@--armstrong.cc>
-
-
-NAME
-----
-cdist-type__nfs_client - nfs client
 
 
 DESCRIPTION
@@ -26,14 +23,14 @@ None.
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-__nfs_client
---------------------------------------------------------------------------------
+.. code-block:: sh
+
+    __nfs_client
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

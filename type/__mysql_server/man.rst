@@ -1,11 +1,8 @@
 cdist-type__mysql_server(7)
 ===========================
+Manage a MySQL server
+
 Benedikt Koeppel <code@benediktkoeppel.ch>
-
-
-NAME
-----
-cdist-type__mysql_server - Manage a MySQL server
 
 
 DESCRIPTION
@@ -18,13 +15,13 @@ with MySQL.
 
 REQUIRED PARAMETERS
 -------------------
-password::
+password
    The root password to set.
 
 
 OPTIONAL PARAMETERS
 -------------------
-no_my_cnf::
+no_my_cnf
    The /root/.my.cnf file is used to temporary store the root password when doing
    the mysql_secure_installation. If you want to have your own .my.cnf file, then
    specify --no_my_cnf "true".
@@ -34,24 +31,24 @@ no_my_cnf::
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-# to install a MySQL server
-__mysql_server
+.. code-block:: sh
 
-# to install a MySQL server, remove remote access, remove test databases 
-# similar to mysql_secure_installation, specify the root password
-__mysql_server --password "Uu9jooKe"
-# this will also write a /root/.my.cnf file
+    # to install a MySQL server
+    __mysql_server
 
-# if you don't want cdist to write a /root/.my.cnf file permanently, specify
-# the --no_my_cnf option
-__mysql_server --password "Uu9jooKe" --no_my_cnf
---------------------------------------------------------------------------------
+    # to install a MySQL server, remove remote access, remove test databases 
+    # similar to mysql_secure_installation, specify the root password
+    __mysql_server --password "Uu9jooKe"
+    # this will also write a /root/.my.cnf file
+
+    # if you don't want cdist to write a /root/.my.cnf file permanently, specify
+    # the --no_my_cnf option
+    __mysql_server --password "Uu9jooKe" --no_my_cnf
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING

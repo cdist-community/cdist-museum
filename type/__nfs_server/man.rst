@@ -1,11 +1,8 @@
 cdist-type__nfs_server(7)
 =========================
+nfs server
+
 Steven Armstrong <steven-cdist--@--armstrong.cc>
-
-
-NAME
-----
-cdist-type__nfs_server - nfs server
 
 
 DESCRIPTION
@@ -26,14 +23,14 @@ None.
 EXAMPLES
 --------
 
---------------------------------------------------------------------------------
-__nfs_server
---------------------------------------------------------------------------------
+.. code-block:: sh
+
+    __nfs_server
 
 
 SEE ALSO
 --------
-- cdist-type(7)
+- `cdist-type(7) <cdist-type.html>`_
 
 
 COPYING
